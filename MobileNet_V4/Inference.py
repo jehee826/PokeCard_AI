@@ -21,7 +21,8 @@ def load_my_model():
     model.classifier = nn.Linear(model.classifier.in_features, NUM_CLASSES)
     
     # 저장된 가중치(.pth) 경로
-    weights_path = r"C:\Users\jehee\vscode-workspace\pikachu_model.pth"
+    current_dir = os.path.dirname(os.path.abspath(__file__)) 
+    weights_path = os.path.join(current_dir, "pokecard_model.pth")
     
     if not os.path.exists(weights_path):
         raise FileNotFoundError(f"❌ 모델 파일을 찾을 수 없습니다: {weights_path}")

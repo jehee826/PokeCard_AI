@@ -4,10 +4,15 @@ import torch.optim as optim
 from torchvision import datasets, transforms
 from torch.utils.data import DataLoader
 import timm
+import os
 
 # 1. 환경 설정 (5825U는 보통 CPU로 돌리지만, 외장 GPU가 있다면 자동으로 잡습니다)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"현재 사용 중인 장치: {device}")
+#.pth파일 저장위치변경
+current_dir = os.path.dirname(os.path.abspath(__file__)) 
+train_path = os.path.join(current_dir,"..", "dataset/train")
+save_path = os.path.join(current_dir, "pokecard_model.pth")
 
 # 2. 데이터 로더 (증강된 100장 불러오기)
 transform = transforms.Compose([
@@ -17,7 +22,7 @@ transform = transforms.Compose([
 ])
 
 # 'augmented_pikachu' 폴더 안에 'pikachu' 폴더가 있는 구조여야 합니다
-dataset = datasets.ImageFolder(root=r'C:\Users\jehee\vscode-workspace\Ai\dataset\train', transform=transform) 
+dataset = datasets.ImageFolder(root=train_path, transform=transform) 
 train_loader = DataLoader(dataset, batch_size=8, shuffle=True)
 
 # 3. MobileNet V4 모델 불러오기 (timm 라이브러리 사용)
@@ -54,5 +59,5 @@ for epoch in range(epochs):
     print(f"Epoch [{epoch+1}/{epochs}] - Loss: {running_loss/len(train_loader):.4f}")
 
 # 7. 모델 저장 (나중에 웹에서 쓰기 위해 .pth로 저장)
-torch.save(model.state_dict(), "pikachu_model.pth")
+torch.save(model.state_dict(), save_path)
 print("✅ 학습 완료 및 모델 저장 성공!")
