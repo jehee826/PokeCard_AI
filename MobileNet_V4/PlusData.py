@@ -3,14 +3,14 @@ from torchvision import transforms
 import os
 
 #기본옵션설정
-folder_name = "pikachu" #폴더명, 저장할이미지이름 저장 
+folder_name = "charizard" #폴더명입력
 
 current_dir = os.path.dirname(os.path.abspath(__file__)) 
 # 윈도우 경로 구분자(\) 문제를 방지하기 위해 콤마(,)로 연결하는 것이 안전합니다.
 train_path = os.path.join(current_dir, "..", "dataset", "train", folder_name)
 
-# 1. 원본 이미지 리스트 (파일명만 리스트로 관리하면 훨씬 깔끔합니다)
-original_files = ["pikachu.webp", "pikachu2.webp", "pikachu3.webp", "pikachu4.jpg", "pikachu5.jpg"] #train_path아래에있는 파일들
+# 1. 원본 이미지 리스트
+original_files = ["charizard.webp", "charizard2.webp", "charizard3.jpg", "charizard4.jpg", "charizard5.jpg"] #train_path아래에있는 파일들
 save_path_dir = train_path # 저장할 폴더
 
 # 이미지 로드 및 변환

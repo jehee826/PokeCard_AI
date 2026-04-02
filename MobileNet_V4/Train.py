@@ -23,9 +23,9 @@ transform = transforms.Compose([
 
 # 'augmented_pikachu' 폴더 안에 'pikachu' 폴더가 있는 구조여야 합니다
 dataset = datasets.ImageFolder(root=train_path, transform=transform) 
-train_loader = DataLoader(dataset, batch_size=8, shuffle=True)
+train_loader = DataLoader(dataset, batch_size=32, shuffle=True) #8 or 32
 
-# 3. MobileNet V4 모델 불러오기 (timm 라이브러리 사용)
+# 3. MobileNet V4 모델 불러오기
 # 'mobilenetv4_conv_small'은 웹용으로 가장 적합한 가벼운 모델입니다
 model = timm.create_model('mobilenetv4_conv_small', pretrained=True)
 
@@ -36,10 +36,10 @@ model = model.to(device)
 
 # 5. 손실함수 및 최적화 도구
 criterion = nn.CrossEntropyLoss()
-optimizer = optim.Adam(model.parameters(), lr=0.001)
+optimizer = optim.Adam(model.parameters(), lr=0.0001)
 
-# 6. 학습 시작 (100장이니 10번 정도만 반복해봅시다)
-epochs = 10
+# 6. 학습 시작
+epochs = 50 #10 or 50
 model.train()
 
 print("🚀 학습을 시작합니다...")

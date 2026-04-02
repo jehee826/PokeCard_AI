@@ -8,10 +8,10 @@ import os
 
 # 1. 모델 설정
 MODEL_NAME = 'mobilenetv4_conv_small'
-# ⚠️ 중요: 학습할 때 사용한 클래스 개수 (피카츄 1종류면 1, 배경 포함이면 2)
+# ⚠️ 중요: 학습할 때 사용한 클래스 개수(폴더 개수)
 NUM_CLASSES = 3 
 # ⚠️ 중요: 학습할 때 폴더 순서대로 이름을 적으세요
-MY_CATEGORIES = ["Charizard","Emolga", "Pikachu"] 
+MY_CATEGORIES = ["charizard","emolga", "pikachu"] 
 
 def load_my_model():
     # 뼈대 만들기
@@ -66,8 +66,7 @@ def predict(image_path):
 
 # 4. 메인 실행
 if __name__ == "__main__":
-    # 먼작귀 사진으로 테스트!
-    test_img = r"C:\Users\jehee\Downloads\TestPika.webp" 
+    test_img = r"C:\Users\USER\Downloads\피카츄추론용.webp" 
     
     if os.path.exists(test_img):
         predict(test_img)
