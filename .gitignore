@@ -1,2 +1,3 @@
 #트레이닝데이터만 안넘김
-dataset/train/
+dataset/train/*
+!dataset/train/.gitkeep
