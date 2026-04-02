@@ -66,7 +66,7 @@ def predict(image_path):
 
 # 4. 메인 실행
 if __name__ == "__main__":
-    test_img = r"C:\Users\USER\Downloads\피카츄추론용.webp" 
+    test_img = r"C:\Users\USER\Downloads\에몽가추론용.webp" 
     
     if os.path.exists(test_img):
         predict(test_img)

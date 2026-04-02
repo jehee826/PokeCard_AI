@@ -23,7 +23,7 @@ transform = transforms.Compose([
 
 # 'augmented_pikachu' 폴더 안에 'pikachu' 폴더가 있는 구조여야 합니다
 dataset = datasets.ImageFolder(root=train_path, transform=transform) 
-train_loader = DataLoader(dataset, batch_size=32, shuffle=True) #8 or 32
+train_loader = DataLoader(dataset, batch_size=128, shuffle=True) #8 or 64 or 128
 
 # 3. MobileNet V4 모델 불러오기
 # 'mobilenetv4_conv_small'은 웹용으로 가장 적합한 가벼운 모델입니다
