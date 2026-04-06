@@ -13,7 +13,7 @@ def train_model():
     print(f"✅ 현재 사용 중인 장치: {device}")
 
     current_dir = os.path.dirname(os.path.abspath(__file__)) 
-    train_path = os.path.join(current_dir, "..", "dataset", "train")
+    train_path = os.path.join(current_dir, "dataset", "train")
     save_path = os.path.join(current_dir, "pokecard_model.pth")
 
     # 2. 데이터 로더 (학습 효율 극대화)

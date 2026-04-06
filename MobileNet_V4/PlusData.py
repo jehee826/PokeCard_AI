@@ -11,11 +11,11 @@ num_per_original = 50   # 원본 1장당 생성할 개수
 # 1. 경로 설정
 current_dir = os.path.dirname(os.path.abspath(__file__))
 # 원본 데이터들이 모여있는 최상위 폴더
-origin_base_path = os.path.abspath(os.path.join(current_dir, "..", "dataset", "origin"))
+origin_base_path = os.path.abspath(os.path.join(current_dir, "dataset", "origin"))
 # 저장될 학습 데이터 최상위 폴더
-train_base_path = os.path.abspath(os.path.join(current_dir, "..", "dataset", "train"))
+train_base_path = os.path.abspath(os.path.join(current_dir, "dataset", "train"))
 # 배경화면 폴더
-bg_path = os.path.abspath(os.path.join(current_dir, "..", "dataset", "background"))
+bg_path = os.path.abspath(os.path.join(current_dir, "dataset", "background"))
 
 # 2. 배경이미지 리스트 로드 (모든 포켓몬 공통 사용)
 def get_image_files(path):

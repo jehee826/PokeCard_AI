@@ -1,12 +1,16 @@
 #해당 폴더구조는 유지하되, 그안의 데이터는 넘기지않음(사진이굉장히많음)
-dataset/train/*
-!dataset/train/.gitkeep
+MobileNet_V4/dataset/origin/*
+!MobileNet_V4/dataset/origin/.gitkeep
 
-dataset/background/*
-!dataset/background/.gitkeep
 
-dataset/test/*
-!dataset/test/.gitkeep
+MobileNet_V4/dataset/train/*
+!MobileNet_V4/dataset/train/.gitkeep
+
+MobileNet_V4/dataset/background/*
+!MobileNet_V4/dataset/background/.gitkeep
+
+MobileNet_V4/dataset/test/*
+!MobileNet_V4/dataset/test/.gitkeep
 
 PaddleOCR/dataset/train/*
 !PaddleOCR/dataset/train/.gitkeep

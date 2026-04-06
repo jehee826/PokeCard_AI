@@ -13,7 +13,7 @@ WEIGHTS_NAME = "pokecard_model.pth"
 MODEL_NAME = 'mobilenetv4_conv_small'
 
 # 카테고리 자동 로드
-pokemonName_path = os.path.abspath(os.path.join(current_dir, "..", "dataset", "origin"))
+pokemonName_path = os.path.abspath(os.path.join(current_dir, "dataset", "origin"))
 MY_CATEGORIES = sorted([f for f in os.listdir(pokemonName_path) 
                        if os.path.isdir(os.path.join(pokemonName_path, f))])
 NUM_CLASSES = len(MY_CATEGORIES)
@@ -69,7 +69,7 @@ def predict(image_path):
 
 if __name__ == "__main__":
     # r""을 쓰거나 /를 써서 경로 에러 방지
-    test_img = os.path.abspath(os.path.join(current_dir, "..", "dataset", "test", "mimikyu.jpg"))
+    test_img = os.path.abspath(os.path.join(current_dir, "dataset", "test", "mimikyu.jpg"))
     
     if os.path.exists(test_img):
         predict(test_img)
