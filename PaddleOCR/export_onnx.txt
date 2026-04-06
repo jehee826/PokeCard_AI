@@ -1,0 +1,2 @@
+paddle2onnx --model_dir "C:\Users\USER\.paddleocr\whl\rec\korean\korean_PP-OCRv4_rec_infer" --model_filename inference.pdmodel --params_filename inference.pdiparams --save_file "C:\Users\USER\vscode-workspace\PokeCard_AI\PaddleOCR\card_rec.onnx" --opset_version 11 --enable_onnx_checker True
+ ㄴ 위 코드 터미널에 입력하면 PaddleOCR폴더로 onnx파일 들어감

@@ -26,7 +26,7 @@ def get_ocr_result(img_path):
     return processed_img, result
 
 def main():
-    img_path = r'C:\Users\USER\vscode-workspace\PokeCard_AI\PaddleOCR\dataset\test\pikachu.jpg'
+    img_path = r'C:\Users\USER\vscode-workspace\PokeCard_AI\PaddleOCR\dataset\test\EveryTime.jpg'
     
     if not os.path.exists(img_path):
         print(f"❌ 파일을 찾을 수 없습니다: {img_path}")
@@ -57,7 +57,7 @@ def main():
     
     # 결과 저장 및 표시
     final_image = Image.fromarray(vis_img)
-    final_image.save('ocr_result_lucario.jpg')
+    final_image.save('ocr_result.jpg')
     print(f"\n🖼️ 시각화 결과가 'ocr_result_lucario.jpg'로 저장되었습니다.")
     final_image.show()
 
