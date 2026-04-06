@@ -7,3 +7,6 @@ dataset/background/*
 
 dataset/test/*
 !dataset/test/.gitkeep
+
+PaddleOCR/dataset/train/*
+!PaddleOCR/dataset/train/.gitkeep
