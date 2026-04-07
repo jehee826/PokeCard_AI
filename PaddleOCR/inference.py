@@ -20,19 +20,19 @@ def get_ocr_result(img_path):
     processed_img = cv2.filter2D(gray, -1, kernel)
 
     # 모델 로드 및 추론
-    ocr = PaddleOCR(use_angle_cls=True, lang='korean', use_gpu=False, show_log=False)
+    ocr = PaddleOCR(use_angle_cls=True, lang='en', use_gpu=False, show_log=False)
     result = ocr.ocr(processed_img, det=True, cls=True)
     
     return processed_img, result
 
 def main():
-    img_path = r'C:\Users\USER\vscode-workspace\PokeCard_AI\PaddleOCR\dataset\test\EveryTime.jpg'
+    img_path = r'C:\Users\USER\vscode-workspace\PokeCard_AI\PaddleOCR\dataset\test\lucario.png'
     
     if not os.path.exists(img_path):
         print(f"❌ 파일을 찾을 수 없습니다: {img_path}")
         return
 
-    print("--- 🔍카드 분석 시작 ---")
+    print("--- 🔍이미지 분석 시작 ---")
     processed_img, result = get_ocr_result(img_path)
 
     if not result or not result[0]:
@@ -58,7 +58,7 @@ def main():
     # 결과 저장 및 표시
     final_image = Image.fromarray(vis_img)
     final_image.save('ocr_result.jpg')
-    print(f"\n🖼️ 시각화 결과가 'ocr_result_lucario.jpg'로 저장되었습니다.")
+    print(f"\n🖼️ 시각화 결과가 'ocr_result.jpg'로 저장되었습니다.")
     final_image.show()
 
 if __name__ == "__main__":
