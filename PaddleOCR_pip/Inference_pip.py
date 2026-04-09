@@ -26,7 +26,7 @@ def get_ocr_result(img_path):
     return processed_img, result
 
 def main():
-    img_path = r'C:\Users\USER\vscode-workspace\PokeCard_AI\PaddleOCR\dataset\test\lucario.png'
+    img_path = r'C:\Users\USER\vscode-workspace\PokeCard_AI\PaddleOCR\dataset\test\sprigatito_cut.png'
     
     if not os.path.exists(img_path):
         print(f"❌ 파일을 찾을 수 없습니다: {img_path}")

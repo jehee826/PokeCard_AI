@@ -12,5 +12,8 @@ MobileNet_V4/dataset/background/*
 MobileNet_V4/dataset/test/*
 !MobileNet_V4/dataset/test/.gitkeep
 
-PaddleOCR/dataset/train/*
-!PaddleOCR/dataset/train/.gitkeep
+PaddleOCR_pip/dataset/train/*
+!PaddleOCR_pip/dataset/train/.gitkeep
+
+PaddleOCR
+!PaddleOCR/.gitkeep
