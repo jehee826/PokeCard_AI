@@ -15,5 +15,5 @@ MobileNet_V4/dataset/test/*
 PaddleOCR_pip/dataset/train/*
 !PaddleOCR_pip/dataset/train/.gitkeep
 
-PaddleOCR
+PaddleOCR/*
 !PaddleOCR/.gitkeep
